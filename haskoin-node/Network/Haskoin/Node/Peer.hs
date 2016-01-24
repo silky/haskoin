@@ -522,8 +522,8 @@ peerHandshake pid ph chan = do
         time <- liftM floor $ liftIO getPOSIXTime
         rdmn <- liftIO randomIO -- nonce
         h    <- runHeaderTree bestBlockHeaderHeight
-        return Version { version     = 70001
-                       , services    = 1
+        return Version { version     = 70011
+                       , services    = 5
                        , timestamp   = time
                        , addrRecv    = add
                        , addrSend    = add
